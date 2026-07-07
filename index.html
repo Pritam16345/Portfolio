@@ -149,8 +149,8 @@
             <div class="project-meta"><span>01 / 03</span><span class="project-year">2026</span></div>
             <h2 class="project-title">CLOAKENT</h2>
             <p class="project-kicker">ENTERPRISE AI DATA FIREWALL</p>
-            <p class="project-copy">A production Zero-Trust DLP gateway that stands between your enterprise and every LLM API call. It detects and redacts 15+ PII and PHI entity types &mdash; names, emails, SSNs, medical codes &mdash; in under 200ms, before the model ever sees them.</p>
-            <p class="project-copy">The Bidirectional Anonymization Protocol reverses this process on the LLM's response &mdash; restoring entities contextually, maintaining data sovereignty without breaking the user experience. Audit logs via SQLAlchemy. Deployed on Hugging Face Spaces and Vercel via Docker microservices.</p>
+            <p class="project-copy">A production Zero-Trust DLP gateway intercepting and sanitizing data sent to public LLMs. It combines Microsoft Presidio pattern matching with SpaCy Transformers (<code>en_core_web_trf</code>) to detect and redact 15+ PII/PHI entity types&mdash;including Aadhaar, PAN, Voter ID cards, and emails&mdash;in under 200ms.</p>
+            <p class="project-copy">Features a Bidirectional Anonymization Protocol that reverses masking on the LLM's response contextually. Fully integrated with a Live Security Inspector terminal in the UI, SQLAlchemy audit logging, and a Dockerized microservices stack deployed on Hugging Face Spaces and Vercel.</p>
             <div class="tag-row" aria-label="CloakEnt stack">
               <span class="tag">Python</span>
               <span class="tag">FastAPI</span>
@@ -209,8 +209,8 @@
           <div class="project-meta"><span>02 / 03</span><span class="project-year">2025</span></div>
           <h2 class="project-title">CLARIVA AI</h2>
           <p class="project-kicker c3">FULL-STACK RAG KNOWLEDGE PLATFORM</p>
-          <p class="project-copy">A production RAG platform built for real multimodal ingestion &mdash; PDFs, YouTube videos, audio, raw video, and websites all flow into a unified FAISS vector index per user, with strict isolation so no tenant ever sees another's data.</p>
-          <p class="project-copy">Streaming chat with real-time retrieval, context injection, and source-attributed answers. Multi-tenant auth via Supabase (Google OAuth + OTP). Zero cross-user data leakage by design, not by accident.</p>
+          <p class="project-copy">A high-fidelity RAG knowledge assistant supporting YouTube transcript extraction (via a 6-layer fallback engine), smart PDF processing with automatic Tesseract OCR fallback, web scraping, and OpenAI Whisper audio/video transcription into isolated client FAISS indexes.</p>
+          <p class="project-copy">Features decoupled Edge Token Streaming via Cloudflare Workers AI (Llama 3.1 8B) for zero-GPU-overhead word-by-word streaming. Supports persistent FAISS indexes synced to Supabase Storage, Supabase multi-tenant auth with RLS policies, and a side-by-side interactive research notes workspace.</p>
           <div class="tag-row" aria-label="Clariva AI stack">
             <span class="tag c3-tag">Python</span>
             <span class="tag c3-tag">FastAPI</span>
@@ -236,18 +236,23 @@
           <div class="project-meta"><span>03 / 03</span><span class="project-year">2024</span></div>
           <h2 class="project-title">CINERECS</h2>
           <p class="project-kicker c2">CONTENT-BASED RECOMMENDATION ENGINE</p>
-          <p class="project-copy">A recommendation engine that covers 5,000 films using CountVectorizer NLP and cosine similarity. Results in under 100ms. Type a title, get the 10 most similar films &mdash; with real poster art, ratings, and metadata pulled live from TMDB.</p>
-          <p class="project-copy">Built end-to-end: the ML model, the Flask API, and the frontend. Fast, accurate, and genuinely useful &mdash; the kind of project that impresses because it works.</p>
+          <p class="project-copy">A hybrid recommendation engine covering 76K+ movies by blending content-based semantic vector search (FAISS + <code>all-MiniLM-L6-v2</code>) with user-based collaborative filtering (0.6 Content + 0.4 Collaborative). Includes real-time autocomplete suggestions in under 50ms and natural language query support.</p>
+          <p class="project-copy">Built as a production-grade decoupled system featuring a FastAPI backend, a Next.js frontend, Upstash Redis caching, Backblaze B2 index persistence, JWT auth with proactive auto-refresh, and automated weekly catalog syncs via GitHub Actions.</p>
           <div class="tag-row" aria-label="CineRecs stack">
             <span class="tag c2-tag">Python</span>
-            <span class="tag c2-tag">Flask</span>
-            <span class="tag c2-tag">Scikit-learn</span>
-            <span class="tag c2-tag">Pandas</span>
-            <span class="tag c2-tag">NumPy</span>
-            <span class="tag c2-tag">TMDB API</span>
+            <span class="tag c2-tag">FastAPI</span>
+            <span class="tag c2-tag">Next.js</span>
+            <span class="tag c2-tag">FAISS</span>
+            <span class="tag c2-tag">Sentence-Transformers</span>
+            <span class="tag c2-tag">Redis</span>
+            <span class="tag c2-tag">Backblaze B2</span>
+            <span class="tag c2-tag">Supabase</span>
           </div>
           <div class="link-row">
-            <a class="proj-link c2-link" href="https://github.com/Pritam16345" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a>
+            <a class="proj-link c2-link" href="https://cinerecs-ebon.vercel.app" target="_blank" rel="noopener noreferrer">Website &nearr;</a>
+          </div>
+          <div class="link-row">
+            <a class="proj-link c2-link" href="https://github.com/Pritam16345/Cinerecs" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a>
           </div>
         </article>
         <aside class="project-visual tilt-card cine-card" aria-label="CineRecs top recommendation scores">
